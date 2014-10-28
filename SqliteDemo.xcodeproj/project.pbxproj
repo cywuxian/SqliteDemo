@@ -14,6 +14,7 @@
 		9A80413319FA00DF008E1683 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A80413219FA00DF008E1683 /* Images.xcassets */; };
 		9A80413619FA00DF008E1683 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A80413419FA00DF008E1683 /* LaunchScreen.xib */; };
 		9A80414219FA00DF008E1683 /* SqliteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A80414119FA00DF008E1683 /* SqliteDemoTests.m */; };
+		9A80414C19FA00EF008E1683 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A80414B19FA00EF008E1683 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		9A80413B19FA00DF008E1683 /* SqliteDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqliteDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80414019FA00DF008E1683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A80414119FA00DF008E1683 /* SqliteDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteDemoTests.m; sourceTree = "<group>"; };
+		9A80414B19FA00EF008E1683 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A80414C19FA00EF008E1683 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		9A80411919FA00DF008E1683 = {
 			isa = PBXGroup;
 			children = (
+				9A80414B19FA00EF008E1683 /* libsqlite3.0.dylib */,
 				9A80412419FA00DF008E1683 /* SqliteDemo */,
 				9A80413E19FA00DF008E1683 /* SqliteDemoTests */,
 				9A80412319FA00DF008E1683 /* Products */,
@@ -344,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SqliteDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SqliteDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

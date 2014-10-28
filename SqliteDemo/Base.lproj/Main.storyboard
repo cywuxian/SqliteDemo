@@ -1,22 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入姓名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SP4-rP-6xG">
+                                <rect key="frame" x="71" y="84" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入年龄" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhQ-te-G27">
+                                <rect key="frame" x="71" y="122" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入城市" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYP-fE-tx3">
+                                <rect key="frame" x="71" y="160" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYt-vB-XEh">
+                                <rect key="frame" x="86" y="219" width="46" height="30"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SqlLiteAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mWp-7o-dTw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF3-b0-RSP">
+                                <rect key="frame" x="137" y="219" width="46" height="30"/>
+                                <state key="normal" title="查询">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="queryAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gz9-DT-tye"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQE-PI-ird">
+                                <rect key="frame" x="191" y="219" width="46" height="30"/>
+                                <state key="normal" title="修改">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChangAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EHI-z9-FUX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3F2-bj-Htl">
+                                <rect key="frame" x="237" y="219" width="46" height="30"/>
+                                <state key="normal" title="删除">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DeleteAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="afy-q1-9ZX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vYt-vB-XEh" secondAttribute="trailing" constant="188" id="0zn-W0-a3L"/>
+                            <constraint firstItem="SP4-rP-6xG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="71" id="CBv-vK-PkK"/>
+                            <constraint firstItem="BhQ-te-G27" firstAttribute="top" secondItem="SP4-rP-6xG" secondAttribute="bottom" constant="8" id="Jou-z5-90G"/>
+                            <constraint firstItem="SP4-rP-6xG" firstAttribute="width" secondItem="BhQ-te-G27" secondAttribute="width" id="QbZ-Tf-aa0"/>
+                            <constraint firstItem="vYt-vB-XEh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="219" id="Sft-zB-5Dp"/>
+                            <constraint firstItem="PYP-fE-tx3" firstAttribute="top" secondItem="BhQ-te-G27" secondAttribute="bottom" constant="8" id="T28-c3-R9x"/>
+                            <constraint firstItem="BhQ-te-G27" firstAttribute="width" secondItem="PYP-fE-tx3" secondAttribute="width" id="d5r-Ge-WIZ"/>
+                            <constraint firstItem="vYt-vB-XEh" firstAttribute="top" secondItem="PYP-fE-tx3" secondAttribute="bottom" constant="29" id="gCT-4I-Buj"/>
+                            <constraint firstAttribute="trailing" secondItem="SP4-rP-6xG" secondAttribute="trailing" constant="70" id="l3x-DD-Qro"/>
+                            <constraint firstItem="SP4-rP-6xG" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="84" id="tPm-Gf-Jda"/>
+                            <constraint firstItem="vYt-vB-XEh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="86" id="uXl-s5-3mf"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="age" destination="BhQ-te-G27" id="ruM-91-fit"/>
+                        <outlet property="city" destination="PYP-fE-tx3" id="QMK-xB-xd5"/>
+                        <outlet property="name" destination="SP4-rP-6xG" id="CCT-Pi-qi3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
